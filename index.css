@@ -312,7 +312,10 @@ body {
   outline: none;
 }
 .email {
-  flex: grow;
+  flex: 1;
+  min-width: 400px;
+  background-color: #fff;
+  color: #333;
 }
 
 /* ========== FOOTER ========== */
