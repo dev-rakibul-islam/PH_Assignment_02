@@ -250,72 +250,61 @@ body {
 
 /* ===== Section Layout ===== */
 .subscribe-section {
-  position: relative;
-  margin-top: 60px;
-  overflow: hidden;
-}
-
-.background-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 1;
-}
-
-.content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+  background-image: url("./assets/news-letter-bg.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
   text-align: center;
+  padding: 20px;
+}
+
+.subscribe-box {
+  padding: 40px 30px;
+  border-radius: 10px;
   width: 90%;
   max-width: 700px;
 }
 
-/* ===== Heading ===== */
-.join-title {
-  color: #fff;
+.subscribe-title {
   font-size: 2.5rem;
-  margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: bold;
+  margin-bottom: 30px;
 }
 
-/* ===== Form Layout ===== */
-.input-container {
+.subscribe-form {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   flex-wrap: nowrap;
-  max-width: 100%;
-  overflow-x: auto;
 }
 
-/* ===== Input Field with Icon ===== */
-
-.join-input {
-  display: flex;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  outline: none;
-}
-.email {
+.subscribe-form input[type="email"] {
+  padding: 15px;
   flex: 1;
-  min-width: 400px;
-  background-color: #fff;
-  color: #333;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  min-width: 0;
+  width: 100%;
+}
+
+.subscribe-form button {
+  padding: 15px 25px;
+  background-color: #f4511e;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.subscribe-form button:hover {
+  background-color: #d33f0e;
 }
 
 /* ========== FOOTER ========== */
@@ -434,16 +423,19 @@ body {
   .deal-text-right h3 {
     font-size: 1rem;
   }
-  .join {
-    font-size: 1.5rem;
+  .subscribe-form {
+    flex-wrap: nowrap;
   }
-  .input-container {
-    flex-direction: column;
+
+  .subscribe-form input[type="email"],
+  .subscribe-form button {
+    border-radius: 0;
   }
-  .email,
-  .bunch-button {
-    width: 80%;
-    margin: auto;
+  .subscribe-form input[type="email"] {
+    border-radius: 5px 0 0 5px;
+  }
+  .subscribe-form button {
+    border-radius: 0 5px 5px 0;
   }
   .footer-sec {
     flex-direction: column;
